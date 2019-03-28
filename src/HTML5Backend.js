@@ -500,11 +500,11 @@ export default class HTML5Backend {
     // Make sure we have dropTargetIds
     if (!dropTargetIds || !dropTargetIds.length) {
       console.log('drag none!');
-      this.actions.drop();
       if (this.isDraggingNativeItem()) {
         console.log('drag native!');
         this.endDragNativeItem();
       }
+      this.endDragNativeItem();
       return;
     }
 
