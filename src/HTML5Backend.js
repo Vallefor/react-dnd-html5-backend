@@ -169,6 +169,7 @@ export default class HTML5Backend {
 
   isDraggingNativeItem() {
     const itemType = this.monitor.getItemType();
+    console.log('isDraggingNativeItem',itemType);
     return Object.keys(NativeTypes).some(
       key => NativeTypes[key] === itemType,
     );
@@ -502,7 +503,7 @@ export default class HTML5Backend {
 
     // Make sure we have dropTargetIds
     if (!dropTargetIds || !dropTargetIds.length) {
-      console.log('drag none!',this.monitor,e);
+      console.log('drag none!',this.monitor,e.dataTransfer.files.length);
       if (this.isDraggingNativeItem()) {
         console.log('drag native!');
         this.endDragNativeItem();
