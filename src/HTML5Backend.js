@@ -169,6 +169,9 @@ export default class HTML5Backend {
 
   isDraggingNativeItem() {
     const itemType = this.monitor.getItemType();
+    if(!itemType) {
+      return true;
+    }
     console.log('isDraggingNativeItem',itemType);
     return Object.keys(NativeTypes).some(
       key => NativeTypes[key] === itemType,
