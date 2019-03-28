@@ -509,9 +509,10 @@ export default class HTML5Backend {
       console.log('drag none!',this.monitor,e.dataTransfer.files.length);
       if (this.isDraggingNativeItem()) {
         console.log('drag native!');
-        this.endDragNativeItem();
+        //this.endDragNativeItem();
       }
-      this.endDragNativeItem();
+
+      //this.endDragNativeItem();
       return;
     }
 
