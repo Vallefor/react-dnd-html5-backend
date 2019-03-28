@@ -455,6 +455,7 @@ export default class HTML5Backend {
       // "drop and blow away the whole document" action.
       e.preventDefault();
       //e.dataTransfer.dropEffect = 'none';
+      console.log('drag over native');
     } else if (this.checkIfCurrentDragSourceRectChanged()) {
       // Prevent animating to incorrect position.
       // Drop effect must be other than 'none' to prevent animation.
@@ -501,7 +502,7 @@ export default class HTML5Backend {
 
     // Make sure we have dropTargetIds
     if (!dropTargetIds || !dropTargetIds.length) {
-      console.log('drag none!');
+      console.log('drag none!',this.monitor,e);
       if (this.isDraggingNativeItem()) {
         console.log('drag native!');
         this.endDragNativeItem();
