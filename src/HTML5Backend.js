@@ -495,8 +495,6 @@ export default class HTML5Backend {
     this.dropTargetIds = [];
 
     // Make sure we have dropTargetIds
-    console.log('drop targets',dropTargetIds);
-    return;
 
     if (!dropTargetIds || !dropTargetIds.length) {
       if (this.isDraggingNativeItem()) {
