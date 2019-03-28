@@ -376,6 +376,8 @@ export default class HTML5Backend {
       return;
     }
 
+    console.log('e.dataTransfer.files.length',e.dataTransfer.files.length);
+
     const { dataTransfer } = e;
     const nativeType = matchNativeItemType(dataTransfer);
 
@@ -394,6 +396,7 @@ export default class HTML5Backend {
     this.dragEnterTargetIds = [];
 
     if (!this.monitor.isDragging()) {
+      console.log('e.dataTransfer.files.length handleTopDragEnter',e.dataTransfer.files.length);
       console.log('is native???');
       // This is probably a native item type we don't understand.
       return;
