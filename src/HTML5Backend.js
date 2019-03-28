@@ -270,6 +270,8 @@ export default class HTML5Backend {
     const { dragStartSourceIds } = this;
     this.dragStartSourceIds = null;
 
+    console.log('drag start', e, dragStartSourceIds);
+
     const clientOffset = getEventClientOffset(e);
 
     // Don't publish the source just yet (see why below)
