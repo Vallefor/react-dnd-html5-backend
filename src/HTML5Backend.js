@@ -390,8 +390,11 @@ export default class HTML5Backend {
     this.dragEnterTargetIds = [];
 
     if (!this.monitor.isDragging()) {
+      console.log('is native???');
       // This is probably a native item type we don't understand.
       return;
+    } else {
+      console.log('not native');
     }
 
     if (!isFirefox()) {
