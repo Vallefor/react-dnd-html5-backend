@@ -496,6 +496,7 @@ export default class HTML5Backend {
 
     // Make sure we have dropTargetIds
     if (!dropTargetIds || !dropTargetIds.length) {
+      console.log('drop targets null');
       return;
     }
 
