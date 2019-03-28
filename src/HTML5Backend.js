@@ -499,6 +499,10 @@ export default class HTML5Backend {
     return;
 
     if (!dropTargetIds || !dropTargetIds.length) {
+      if (this.isDraggingNativeItem()) {
+        console.log('drag native!');
+        this.endDragNativeItem();
+      }
       return;
     }
 
