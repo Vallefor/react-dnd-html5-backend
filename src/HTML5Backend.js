@@ -482,7 +482,7 @@ export default class HTML5Backend {
     this.dropTargetIds = [];
     e.preventDefault();
 
-    console.log('handleTopDropCapture',e);
+    console.log('handleTopDropCapture',e.dataTransfer.files.length);
 
     if (this.isDraggingNativeItem()) {
       this.currentNativeSource.mutateItemByReadingDataTransfer(e.dataTransfer);
